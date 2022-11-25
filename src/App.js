@@ -7,27 +7,20 @@ import { BsGithub } from "react-icons/bs";
 import { BsLinkedin } from "react-icons/bs";
 import { FaRegClipboard } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
-import { Helmet } from "react-helmet";
 
 // COMPONENTES
 import Perfil from "./components/Perfil";
 import Card from "./components/Card";
 
-import Curriculo from "./Renan-Gimenez-Curriculo.pdf";
-
-// import Test from "./components/Test";
-
+import Curriculo from "./assets/Renan-Gimenez-Curriculo.pdf";
 
 function App() {
   return (
     <div className="App">
       <Perfil 
-      avatarLink="https://avatars.githubusercontent.com/u/83655187?v=4" 
-      username="Renan Gimenez" 
-      description="Desenvolvedor Web / React"
-      />
-
-      {/* <Test value="Teste 2"/> */}
+        avatarLink="https://avatars.githubusercontent.com/u/83655187?v=4" 
+        username="Renan Gimenez" 
+        description="Desenvolvedor Web / React" />
 
       <section className="socialmedias">
         <Card name="GitHub" logo= {<BsGithub/>} link="https://github.com/renan-gimenez" />
