@@ -1,11 +1,7 @@
 import React from 'react';
 
-export default function SocialButton(props) {
+export default function Card(props) {
     return (
-
-        // <h1>{props.name}</h1>
-
-
         <div className="socialmedia-div">
             <a href={props.link} target="_blank">
                 <p className="socialmedia-name">{props.name}</p>

@@ -1,46 +1,43 @@
 import React from "react";
-import styled from "styled-components";
 
 // ICONS
 import { BsInstagram } from "react-icons/bs";
 import { BsTwitter } from "react-icons/bs";
-import { BsYoutube } from "react-icons/bs";
 import { BsGithub } from "react-icons/bs";
 import { BsLinkedin } from "react-icons/bs";
+import { FaRegClipboard } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
-
-// STYLE
-import './style.css';
+import { Helmet } from "react-helmet";
 
 // COMPONENTES
-import Username from "./components/Username";
-import SocialButton from "./components/SocialButton";
+import Perfil from "./components/Perfil";
+import Card from "./components/Card";
 
-import Desc from "./components/Desc";
-import Avatar from "./components/Avatar";
+import Curriculo from "./Renan-Gimenez-Curriculo.pdf";
+
+// import Test from "./components/Test";
 
 
 function App() {
   return (
-      <div className="App">
-        <section className="user-info">  
+    <div className="App">
+      <Perfil 
+      avatarLink="https://avatars.githubusercontent.com/u/83655187?v=4" 
+      username="Renan Gimenez" 
+      description="Desenvolvedor Web / React"
+      />
 
-          <Avatar src={"https://avatars.githubusercontent.com/u/83655187?v=4"} alt="Logo"/>
-          <Username>Renan Gimenez</Username>
-          <Desc>Desenvolvedor Web / React</Desc>
+      {/* <Test value="Teste 2"/> */}
 
-        </section>
-
-        <section className="socialmedias">
-          <SocialButton name="Instagram" logo= {<BsInstagram/>} link="https://instagram.com/renan_gmnz" /> 
-          <SocialButton name="Twitter" logo= {<BsTwitter/>} link="https://twitter.com/RenanSGimenez" />
-          <SocialButton name="Youtube" logo= {<BsYoutube/>} link="https://www.youtube.com/channel/UCMJrnz3E643i8ETrN6YchwQ" />
-          <SocialButton name="GitHub" logo= {<BsGithub/>} link="https://github.com/renan-gimenez" />
-          <SocialButton name="Linkedin" logo= {<BsLinkedin/>} link="https://linkedin.com" />
-          <SocialButton name="Entre em contato" logo= {<MdOutlineEmail/>} link="mailto:renansousagimenes@gmail.com" />
-        </section>
-      </div>
-
+      <section className="socialmedias">
+        <Card name="GitHub" logo= {<BsGithub/>} link="https://github.com/renan-gimenez" />
+        <Card name="Linkedin" logo= {<BsLinkedin/>} link="https://linkedin.com/in/renan-gimenez" />
+        <Card name="Instagram" logo= {<BsInstagram/>} link="https://instagram.com/renan_gmnz" /> 
+        <Card name="Twitter" logo= {<BsTwitter/>} link="https://twitter.com/RenanSGimenez" />
+        <Card name="Currículo" logo= {<FaRegClipboard/>} link={Curriculo} />
+        <Card name="Entre em contato" logo= {<MdOutlineEmail/>} link="mailto:renangiimenez@gmail.com" />
+      </section>
+    </div>
   );
 }
 

@@ -1,6 +1,16 @@
-.App{
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .App{
     min-height: 100vh;
-    min-width: 100vw;    
+    min-width: 100vw;
+    
+    /* max-height: 70%; */
 
     display: flex;
     justify-content: center;
@@ -17,6 +27,11 @@
     /* background: linear-gradient(400deg, #336699, #003366); */
 
     color: white;
+}
+
+.avatar{
+    height: 128px;
+    border-radius: 100%;
 }
 
 .user-info{
