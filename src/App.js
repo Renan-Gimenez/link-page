@@ -14,7 +14,7 @@ import Card from "./components/Card";
 
 import Curriculo from "./assets/Renan-Gimenez-Curriculo.pdf";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
       <Perfil 
@@ -33,5 +33,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
